@@ -84,7 +84,7 @@ double calculateWidth() {
     double x1, y1, x2, y2;
     askForUserInput(&x1, &y1, &x2, &y2);
 
-    double width = fabs(x2 - x1);
+    double width = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
     printf("\nThe width of the city encompassed by your request is %.2f\n", width);
 
     return 2;
@@ -99,7 +99,7 @@ double calculateHeight() {
    double x1, y1, x2, y2;
     askForUserInput(&x1, &y1, &x2, &y2);
     
-    double height = fabs(y2 - y1);
+    double height = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
     printf("\nThe height of the city encompassed by your request is %.2f\n", height);
 
     return 1;
