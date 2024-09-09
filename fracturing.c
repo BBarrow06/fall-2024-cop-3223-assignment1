@@ -9,7 +9,7 @@
 // Purpose: Asks the user to input their points
 // Output: "Point #1 Entered, etc."
 // Precondition: user has inputted 4 values
-// Postcondition: x1, y1, x2, and y2 are defined
+// Postcondition: x1, y1, x2, and y2 are defined based on user input
 void askForUserInput(double *x1, double *y1, double *x2, double *y2){
     
     // Ask For Point #1
@@ -29,8 +29,8 @@ void askForUserInput(double *x1, double *y1, double *x2, double *y2){
 // Calculate and Return the Distance
 // Purpose: Calculates the distance based on entered points
 // Output: Prints the questions about points, and prints the calculated distance
-// Precondition: user has inputted 4 values
-// Postcondition: distance is defined for these points
+// Precondition: none
+// Postcondition: the distance is printed, and returns 0
 double calculateDistance() {
     double x1, y1, x2, y2;
     askForUserInput(&x1, &y1, &x2, &y2);
@@ -44,8 +44,8 @@ double calculateDistance() {
 // Calculate and Return the Perimeter
 // Purpose: Calculates the perimeter based on entered points
 // Output: Prints the questions about points, and prints the calculated perimeter
-// Precondition: user has inputted 4 values
-// Postcondition: perimeter is defined for these points, returns difficulty level
+// Precondition: calculateDistance has run successfully
+// Postcondition: the perimeter is printed, and difficulty level 2 is returned
 double calculatePerimeter() {
     double x1, y1, x2, y2;
     askForUserInput(&x1, &y1, &x2, &y2);
@@ -61,8 +61,8 @@ double calculatePerimeter() {
 // Calculate and Return the Area
 // Purpose: Calculates the area based on entered points
 // Output: Prints the questions about points, and prints the calculated area
-// Precondition: user has inputted 4 values
-// Postcondition: area is defined for these points, returns difficulty level
+// Precondition: calculateArea has run successfully
+// Postcondition: the area is printed, and difficulty level 4 is returned
 double calculateArea() {
     double x1, y1, x2, y2;
     askForUserInput(&x1, &y1, &x2, &y2);
@@ -78,8 +78,8 @@ double calculateArea() {
 // Calculate and Return the Width
 // Purpose: Calculates the width based on entered points
 // Output: Prints the questions about points, and prints the calculated width
-// Precondition: user has inputted 4 values
-// Postcondition: width is defined for these points, returns the difficulty level
+// Precondition: calculateWidth has run successfully
+// Postcondition: the width is printed, and difficulty level 2 is returned
 double calculateWidth() {
     double x1, y1, x2, y2;
     askForUserInput(&x1, &y1, &x2, &y2);
@@ -93,8 +93,8 @@ double calculateWidth() {
 // Calculates and Returns the Height
 // Purpose: Calculates the height based on entered points
 // Output: Prints the questions about points, and prints the calculated height
-// Precondition: user has inputted 4 values
-// Postcondition: height is defined for these points, returns difficulty level
+// Precondition: calculateHeight has run successfully
+// Postcondition: the height is printed, and difficulty level 1 is returned
 double calculateHeight() {
    double x1, y1, x2, y2;
     askForUserInput(&x1, &y1, &x2, &y2);
@@ -108,8 +108,8 @@ double calculateHeight() {
 // Function Executions
 // Purpose: Runs all of the above functions for calculating distance, perimeter, area, width, and height
 // Output: For each function, prints the questions about points, followed by the calculated value
-// Precondition: user has inputted 4 values for all functions
-// Postcondition: none
+// Precondition: none
+// Postcondition: all functions have been run, values have been printed, and difficulty levels have been returned
 int main() {
     calculateDistance();
     calculatePerimeter();
